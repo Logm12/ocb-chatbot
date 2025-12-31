@@ -1,0 +1,48 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-ocb-primary: #006e3e;
+  --color-ocb-secondary: #bfa25f;
+  --color-ocb-accent: #f3e6c0;
+
+  --font-sans: "Inter", system-ui, sans-serif;
+}
+
+body {
+  @apply bg-gray-50 text-gray-900 font-sans;
+}
+
+@keyframes scan {
+  0% {
+    top: 0;
+    opacity: 0;
+  }
+
+  50% {
+    top: 100%;
+    opacity: 1;
+  }
+
+  100% {
+    top: 0;
+    opacity: 0;
+  }
+}
+
+@keyframes shake {
+
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  25% {
+    transform: translateX(-5px);
+  }
+
+  75% {
+    transform: translateX(5px);
+  }
+}
